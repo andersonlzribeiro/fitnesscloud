@@ -1,0 +1,31 @@
+<h1>Listing billing_plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Days</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @billing_plans.each do |billing_plan| %>
+      <tr>
+        <td><%= billing_plan.description %></td>
+        <td><%= billing_plan.days %></td>
+        <td><%= billing_plan.active %></td>
+        <td><%= link_to 'Show', billing_plan %></td>
+        <td><%= link_to 'Edit', edit_billing_plan_path(billing_plan) %></td>
+        <td><%= link_to 'Destroy', billing_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Billing plan', new_billing_plan_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@billing_plan) do |f| %>
+  <% if @billing_plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@billing_plan.errors.count, "error") %> prohibited this billing_plan from being saved:</h2>
+
+      <ul>
+      <% @billing_plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :days %><br>
+    <%= f.number_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing health_clubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health_clubs.each do |health_club| %>
+      <tr>
+        <td><%= health_club.name %></td>
+        <td><%= link_to 'Show', health_club %></td>
+        <td><%= link_to 'Edit', edit_health_club_path(health_club) %></td>
+        <td><%= link_to 'Destroy', health_club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health club', new_health_club_path %>

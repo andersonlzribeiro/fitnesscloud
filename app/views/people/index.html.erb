@@ -1,0 +1,65 @@
+<h1>Listing people</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Rg</th>
+      <th>Cpf</th>
+      <th>Birth date</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Address</th>
+      <th>Adress number</th>
+      <th>District</th>
+      <th>Phone</th>
+      <th>Business phone</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Emergency contact 1</th>
+      <th>Emergency contact 2</th>
+      <th>Emergency contact 1 phone</th>
+      <th>Emergency contact 2 phone</th>
+      <th>Health insurance provider</th>
+      <th>Observation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.gender %></td>
+        <td><%= person.rg %></td>
+        <td><%= person.cpf %></td>
+        <td><%= person.birth_date %></td>
+        <td><%= person.city %></td>
+        <td><%= person.zipcode %></td>
+        <td><%= person.address %></td>
+        <td><%= person.adress_number %></td>
+        <td><%= person.district %></td>
+        <td><%= person.phone %></td>
+        <td><%= person.business_phone %></td>
+        <td><%= person.mobile %></td>
+        <td><%= person.email %></td>
+        <td><%= person.emergency_contact_1 %></td>
+        <td><%= person.emergency_contact_2 %></td>
+        <td><%= person.emergency_contact_1_phone %></td>
+        <td><%= person.emergency_contact_2_phone %></td>
+        <td><%= person.health_insurance_provider %></td>
+        <td><%= person.observation %></td>
+        <td><%= link_to 'Show', person %></td>
+        <td><%= link_to 'Edit', edit_person_path(person) %></td>
+        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_person_path %>

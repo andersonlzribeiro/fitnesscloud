@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plan_id: 
+  billing_plan_id: 
+  price: 9.99
+  entrance_fee: 9.99
+  start_date: 2014-03-07 17:43:49
+  end_date: 2014-03-07 17:43:49
+
+two:
+  plan_id: 
+  billing_plan_id: 
+  price: 9.99
+  entrance_fee: 9.99
+  start_date: 2014-03-07 17:43:49
+  end_date: 2014-03-07 17:43:49

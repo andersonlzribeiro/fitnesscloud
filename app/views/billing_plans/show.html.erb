@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @billing_plan.description %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @billing_plan.days %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @billing_plan.active %>
+</p>
+
+<%= link_to 'Edit', edit_billing_plan_path(@billing_plan) %> |
+<%= link_to 'Back', billing_plans_path %>

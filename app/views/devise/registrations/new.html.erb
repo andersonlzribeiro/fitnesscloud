@@ -1,0 +1,51 @@
+
+<h1 class="ui dividing header">
+     Nova Conta
+</h1>
+
+<p>Informe um login e senha para começar a usar o sistema FitnessCloud</p>
+
+
+<div class="ui error form segment">
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+  <div class="ui error message">
+    <div class="header">Action Forbidden</div>
+    <p><%= devise_error_messages! %></p>
+  </div>
+
+
+  
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
+
+    <div class="field">
+	  <%= f.label :password, "Senha" %>
+	  <%= f.password_field :password %>
+    </div>
+  
+
+  <div class="field">
+	  <%= f.label :password_confirmation, "Confirmar Senha" %>
+	  <%= f.password_field :password_confirmation %>
+  </div>
+
+  <%= f.submit "Criar Conta" , class:"ui blue submit button" %>
+
+	<%= render "devise/shared/links" %>
+
+<% end %>
+
+</div>
+
+
+
+
+
+
+  
+
+

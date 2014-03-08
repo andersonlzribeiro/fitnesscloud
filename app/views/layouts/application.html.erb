@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FitnessCloud</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="main">
+
+
+<div class="ui fixed transparent inverted main menu">
+    <div class="container">
+      
+      <div class="title item">
+        <b>FitnessCloud</b> Gerenciamento de Academias
+      </div>
+      
+      
+      <div class="section ui link item">
+        <div class="menu">
+          
+            <div class="active item">
+              <a href="/index.html">1. Introduction</a>
+            </div>
+          
+            <div class="item">
+              <a href="/collection.html">2. UI Collections</a>
+            </div>
+          
+            <div class="item">
+              <a href="/element.html">3. UI Elements</a>
+            </div>
+          
+            <div class="item">
+              <a href="/module.html">4. UI Modules</a>
+            </div>
+          
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+<div class="ui page grid">
+	<div class="column">
+		<%= yield %>
+	</div>	
+</div>	
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+module HealthClubsHelper
+end

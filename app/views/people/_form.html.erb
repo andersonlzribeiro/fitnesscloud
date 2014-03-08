@@ -1,0 +1,158 @@
+
+
+<div class="ui error form segment">
+  <%= form_for(@person) do |f| %>
+    <% if @person.errors.any? %>
+      <div id="error_explanation" class="ui error message">
+        <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+        <ul>
+        <% @person.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name, "Nome" %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="gender" checked="checked">
+        <label>Masculino</label>
+      </div>
+      <div class="ui radio checkbox">
+        <input type="radio" name="gender" >
+        <label>Feminino</label>
+      </div>
+    </div>
+
+    <div class="three fields">
+        <div class="field">
+          <%= f.label :birth_date, "Data de Nascimento" %><br>
+          <%= f.text_field :birth_date, class: "date" %>
+        </div>
+        <div class="field">
+          <%= f.label :rg, "RG" %><br>
+          <%= f.text_field :rg %>
+        </div>
+        <div class="field">
+          <%= f.label :cpf, "CPF"  %><br>
+          <%= f.text_field :cpf, class: "cpf" %>
+        </div>
+        
+    </div>
+
+
+    <div class="three fields">
+
+        <div class="field">
+          <%= f.label :zipcode, "CEP" %><br>
+          <%= f.text_field :zipcode, class: "zipcode" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :address, "Endereço" %><br>
+          <%= f.text_field :address %>
+        </div>
+
+        <div class="field">
+          <%= f.label :adress_number, "Número" %><br>
+          <%= f.text_field :adress_number %>
+        </div>
+
+    </div>
+
+    <div class="three fields">
+
+        <div class="field">
+          <%= f.label :district, "Bairro" %><br>
+          <%= f.text_field :district %>
+        </div>
+
+        <div class="field">
+          <%= f.label :city_id, "Estado" %><br>
+          <%= f.text_field :city_id %>
+        </div>
+
+        <div class="field">
+          <%= f.label :city_id, "Cidade" %><br>
+          <%= f.text_field :city_id %>
+        </div>
+
+     </div>
+    
+
+    <div class="four fields">
+    
+      <div class="field">
+        <%= f.label :phone, "Telefone" %><br>
+        <%= f.text_field :phone, class: "phone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :mobile, "Celular" %><br>
+        <%= f.text_field :mobile, class: "phone" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, "Email" %><br>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :business_phone, "Telefone Comercial" %><br>
+        <%= f.text_field :business_phone ,  class:"phone" %>
+      </div>
+
+     </div> 
+
+
+  <div class="four fields">
+    <div class="field">
+      <%= f.label :emergency_contact_1, "Contato para emergência" %><br>
+      <%= f.text_field :emergency_contact_1 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :emergency_contact_1_phone, "Telefone" %><br>
+      <%= f.text_field :emergency_contact_1_phone , class: "phone" %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :emergency_contact_2, "Contato para emergência" %><br>
+      <%= f.text_field :emergency_contact_2 %>
+    </div>
+
+    
+    <div class="field">
+      <%= f.label :emergency_contact_2_phone, "Telefone" %><br>
+      <%= f.text_field :emergency_contact_2_phone , class: "phone" %>
+    </div>
+
+  </div>
+
+
+    <div class="field">
+      <%= f.label :health_insurance_provider, "Plano de Saúde" %><br>
+      <%= f.text_field :health_insurance_provider %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :observation, "Observações" %><br>
+      <%= f.text_field :observation %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit  "Salvar" , class:"ui blue submit button" %>
+    </div>
+
+
+  <% end %>
+</div>  
